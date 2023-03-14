@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <style>
-    .container{
+     .container{
         display: flex; flex-direction: row;            
     }
 .container > div {  
@@ -28,44 +28,102 @@
 <p>Click on the bushes to search for the mouse, beware the cat</p>
 <p id="bushes">Number of bushes checked is zero.</p>
 <p id="penalty">Penalty is zero.</p>
-<p>Click for help</p>
+<p onclick="help()">Click for help</p>
 <p id="help">Help report</p>
 
 <div class="container">
     <div class="row">
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-0" onclick="check(0)"></div>
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-1" onclick="check(1)"></div>
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-2" onclick="check(2)"></div>
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-3" onclick="check(3)"></div>
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-4" onclick="check(4)"></div>
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-5" onclick="check(5)"></div>        
     </div>
     <div class="row">
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-6" onclick="check(6)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-7" onclick="check(7)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-8" onclick="check(8)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-9" onclick="check(9)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-10" onclick="check(10)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-11" onclick="check(11)"></div>        
     </div>    
     <div class="row">
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-
-    </div>
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-12" onclick="check(12)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-13" onclick="check(13)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-14" onclick="check(14)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-15" onclick="check(15)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-16" onclick="check(16)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-17" onclick="check(17)"></div>        
+    </div>   
     <div class="row">
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>        
-        <div><img src="SmallBush.jpg" width="150px" height="150px"></div>  
-    </div>
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-18" onclick="check(18)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-19" onclick="check(19)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-20" onclick="check(20)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-21" onclick="check(21)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-22" onclick="check(22)"></div>        
+        <div><img src="SmallBush.jpg" width="150px" height="150px" id="small_bush-23" onclick="check(23)"></div>        
+    </div>   
 </div>
+
+<script>
+    let ids = [document.getElementById("small_bush-0"), document.getElementById("small_bush-1"), document.getElementById("small_bush-2"), document.getElementById("small_bush-3"), document.getElementById("small_bush-4"), document.getElementById("small_bush-5"), document.getElementById("small_bush-6"), document.getElementById("small_bush-7"), document.getElementById("small_bush-8"), document.getElementById("small_bush-9"), document.getElementById("small_bush-10"), document.getElementById("small_bush-11"), document.getElementById("small_bush-12"), document.getElementById("small_bush-13"), document.getElementById("small_bush-14"), document.getElementById("small_bush-15"), document.getElementById("small_bush-16"), document.getElementById("small_bush-17"), document.getElementById("small_bush-18"), document.getElementById("small_bush-19"), document.getElementById("small_bush-20"), document.getElementById("small_bush-21"), document.getElementById("small_bush-22"), document.getElementById("small_bush-23")]
+    var checkCount = 0
+    var penalty = 0
+    var lastCheck = 0
+    var mouseLocation = 13
+    var catLocation = 21
+    var gameOver = false
+
+    function check(position) {
+        ids[position]
+        lastCheck = position
+        if(position == mouseLocation){
+            document.getElementById("small_bush-" + mouseLocation).src = "mouse.jpg"
+            gameOver = true
+            penalty = penalty - 3
+            checkCount = checkCount + 1
+
+            document.getElementById("bushes").innerHTML = "Number of bushes checked is " + checkCount + "."
+            document.getElementById("penalty").innerHTML = "Penalty is " + penalty + "."
+        }
+        else{
+            if(position == catLocation){
+                document.getElementById("small_bush-" + catLocation).src = "tiger.jpg"
+                checkCount = checkCount + 1
+                penalty = penalty + 4
+
+                document.getElementById("bushes").innerHTML = "Number of bushes checked is " + checkCount + "."
+                document.getElementById("penalty").innerHTML = "Penalty is " + penalty + "."
+            }
+            else{
+                document.getElementById("small_bush-" + position).src = "grass.webp"
+                checkCount = checkCount + 1
+                penalty = penalty + 1
+
+                document.getElementById("bushes").innerHTML = "Number of bushes checked is " + checkCount + "."
+                document.getElementById("penalty").innerHTML = "Penalty is " + penalty + "."
+            }
+        }
+    }
+
+    function help(){
+        penalty = penalty + 2
+        if((lastCheck - 1) == mouseLocation || (lastCheck + 1) == mouseLocation || (lastCheck + 6) == mouseLocation || (lastCheck + 1) == mouseLocation){
+            document.getElementById("help").innerHTML = "squeak"
+        }
+        else{
+            if((lastCheck - 1) == catLocation || (lastCheck + 1) == catLocation || (lastCheck - 6) == catLocation || (lastCheck + 6) == catLocation){
+                document.getElementById("help").innerHTML = "meow"
+            }
+            else{
+                document.getElementById("help").innerHTML = "Sorry, no help available"
+            }
+        }
+        document.getElementById("penalty").innerHTML = "Penalty is " + penalty + "."
+    }
+
+</script>
 
 </body>
 </html>
