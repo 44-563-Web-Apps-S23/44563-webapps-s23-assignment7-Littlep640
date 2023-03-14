@@ -11,20 +11,20 @@
 </head>
 <body>    
     <h2>Peyton speed check</h2>
-
-    <button type="button" class="btn btn-primary"onclick="buttonPress2()">Click me change the color.</button>
+    
     
 <div id="target">Your time</div>
 <div id="counter">Count </div>
 
 <button type="button">Start timer</button>
-<button type="button">React</button>
+<button type="button" onclick="recordTime()">React</button>
 
 <script>
     var reactTime = undefined
 
     function recordTime(){
-        reactTime = Date.now()        
+        reactTime = Date.now()
+        console.log(reactTime)
     }
 </script>
 
