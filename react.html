@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>React to the Button</title>
+  <title>React to the Button</title>  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -16,8 +16,8 @@
 <div id="target">Your time</div>
 <div id="counter">Count </div>
 
-<button type="button">Start timer</button>
-<button type="button" onclick="recordTime()">React</button>
+<button type="button" onclick="startTime()" style="color: rgb(210, 149, 69); background-color: black;">Start timer</button>
+<button type="button" onclick="recordTime()" style="color: red; background-color: black;">React</button>
 
 <script>
     var reactTime = undefined
@@ -25,6 +25,29 @@
     function recordTime(){
         reactTime = Date.now()
         console.log(reactTime)
+    }
+
+    function startTime(){
+    
+        for(let i = 0; i < 9; i++){            
+            setTimeout( function() {
+                document.getElementById("counter").innerHTML = i
+            }, (8-i) * 1000)
+
+            document.getElementById("counter").innerHTML = i
+        }
+        setTimeout(function() {
+            if(reactTime == undefined){
+            document.getElementById("target").innerHTML = "Too slow"
+            }
+            else {
+            var endTime = Date.now()
+            endTime = endTime - reactTime            
+            document.getElementById("target").innerHTML = "Time was " + endTime
+        }
+        }, 8000)
+                
+        
     }
 </script>
 
