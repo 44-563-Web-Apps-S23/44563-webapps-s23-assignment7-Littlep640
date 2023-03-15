@@ -40,6 +40,11 @@
 	<button onclick="makeNewDiv()">Add value</button>
 	
 	
+<button type="button" onclick="get()">Get</button>
+<button type="button" onclick="delay()">Delay</button>
+
+
+
 </body>
 <script>
 	function makeNewDiv(){
@@ -54,5 +59,30 @@
 		container.appendChild(element)
 		
 	}
+
+    function get(){
+        var queueItems = document.getElementsByClassName("delayQ")
+        if(queueItems.length > 0){
+            queueItems[0].remove()
+        }
+    }
+
+    function delay(){
+        var queueItems = document.getElementsByClassName("delayQ")
+        if(queueItems.length == 0 || queueItems.length == 1){
+            return
+        }
+        else{            
+            var removedItem = queueItems[0]
+            
+            queueItems[0].remove()
+            let container = document.getElementById("target")            
+            container.insertBefore(removedItem, container.firstChild)
+            container.append(removedItem)        
+            
+        }
+    }
+
+
 </script>
 </html>	
